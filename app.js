@@ -41,7 +41,13 @@ async function getPriceFeed() {
           .children()
           .each((childIndex, childElement) => {
             //Set up crypto info const
-            const cryptoInfo = $(childElement).text();
+            //Change from const to let to redefine it on the if statement below
+            let cryptoInfo = $(childElement).text();
+
+            //Clean off the crypto infomartion text format by targetting the first paragraph tag
+            if (keyIndex === 1 || keyIndex === 6) {
+              cryptoInfo = $("p:first-child", $(childElement).html()).text();
+            }
 
             //Store crypto Information inside the array
             if (cryptoInfo) {
