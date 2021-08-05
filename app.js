@@ -2,6 +2,26 @@ const express = require("express");
 const axios = require("axios");
 const cheerio = require("cheerio");
 
+//Set up express server
+const app = express();
+
+app.get("/", async (req, res) => {
+  try {
+    const priceFeed = await getPriceFeed();
+
+    return res.status(200).json({
+      result: priceFeed,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      err: err.toString(),
+    });
+  }
+});
+
+app.listen(process.env.PORT || 3000);
+
+//Function which returns crypto price feed
 async function getPriceFeed() {
   try {
     //Define site which will be scraped
@@ -28,6 +48,9 @@ async function getPriceFeed() {
       "volume",
       "circulatingSupply",
     ];
+
+    //Set up array to collect all information
+    const coinArray = [];
 
     $(elementSelector).each((parentIndex, parentElement) => {
       let keyIndex = 0;
@@ -56,12 +79,12 @@ async function getPriceFeed() {
               keyIndex++;
             }
           });
-        console.log(coinObject);
+
+        coinArray.push(coinObject);
       }
     });
+    return coinArray;
   } catch (err) {
     console.error(err);
   }
 }
-
-getPriceFeed();
