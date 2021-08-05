@@ -17,14 +17,40 @@ async function getPriceFeed() {
     const elementSelector =
       "#__next > div > div.main-content > div.sc-57oli2-0.dEqHl.cmc-body-wrapper > div > div:nth-child(1) > div.h7vnx2-1.bFzXgL > table > tbody > tr";
 
+    //Create array for storing crypto information
+    const keys = [
+      "rank",
+      "name",
+      "price",
+      "24hourChange",
+      "7dChange",
+      "marketCap",
+      "volume",
+      "circulatingSupply",
+    ];
+
     $(elementSelector).each((parentIndex, parentElement) => {
+      let keyIndex = 0;
+
+      //Create object which will populate the array
+      const coinObject = {};
+
       //Get the top 10
       if (parentIndex <= 9) {
         $(parentElement)
           .children()
           .each((childIndex, childElement) => {
-            console.log($(childElement).text());
+            //Set up crypto info const
+            const cryptoInfo = $(childElement).text();
+
+            //Store crypto Information inside the array
+            if (cryptoInfo) {
+              coinObject[keys[keyIndex]] = cryptoInfo;
+
+              keyIndex++;
+            }
           });
+        console.log(coinObject);
       }
     });
   } catch (err) {
