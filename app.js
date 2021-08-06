@@ -8,7 +8,7 @@ const app = express();
 app.get("/", async (req, res) => {
   try {
     const priceFeed = await getPriceFeed();
-
+    app.set("json spaces", 2);
     return res.status(200).json({
       result: priceFeed,
     });
