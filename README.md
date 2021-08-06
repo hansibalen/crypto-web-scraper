@@ -1,6 +1,7 @@
 # Crypto Web Scraper
 
-A web scraper, which scrapes cryptocurrency data.
+A web scraper, which scrapes cryptocurrency data.\
+[Live site](https://crypto-web-scraper.herokuapp.com/)
 
 ## Description
 
