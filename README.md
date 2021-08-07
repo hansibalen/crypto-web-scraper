@@ -14,7 +14,7 @@ Right after, I created an array to store the crypto details, an object which wou
 details, and an array of objects, which would display the details for only the first 10 entries.\
 Finally, I initialized an [Express](https://expressjs.com/) server to output the data.
 
-![Initial output](images/img1.png)
+![Initial output](https://i.ibb.co/LgFXM8r/img1.png)
 
 Although console logging the data would return a readable JSON of the crypto information, as you can see, that's not the case on the express server.\
 Needless to say that not everyone has a JSON Formatter extension, so I had to make the output readable.\
@@ -26,7 +26,7 @@ All I needed to do was to add this line inside the express server:
 
 And that was it. A much better data output.
 
-![Final output](images/img2.png)
+![Final output](https://i.ibb.co/whMJFJ7/img2.png)
 
 ## Installation
 
