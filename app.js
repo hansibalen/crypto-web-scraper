@@ -8,6 +8,7 @@ const app = express();
 app.get("/", async (req, res) => {
   try {
     const priceFeed = await getPriceFeed();
+    //Format data into vertical JSON
     app.set("json spaces", 2);
     return res.status(200).json({
       result: priceFeed,
@@ -75,7 +76,6 @@ async function getPriceFeed() {
             //Store crypto Information inside the array
             if (cryptoInfo) {
               coinObject[keys[keyIndex]] = cryptoInfo;
-
               keyIndex++;
             }
           });
