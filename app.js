@@ -36,7 +36,7 @@ async function getPriceFeed() {
     //Initialize Cheerio, target site elements
     const $ = cheerio.load(data);
     const elementSelector =
-      "#__next > div > div.main-content > div.sc-57oli2-0.dEqHl.cmc-body-wrapper > div > div:nth-child(1) > div.h7vnx2-1.bFzXgL > table > tbody > tr";
+      "#__next > div.bywovg-1.sXmSU > div.main-content > div.sc-57oli2-0.comDep.cmc-body-wrapper > div > div:nth-child(1) > div.h7vnx2-1.bFzXgL > table > tbody > tr";
 
     //Create array for storing crypto information
     const keys = [
