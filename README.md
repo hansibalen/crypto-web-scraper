@@ -45,7 +45,7 @@ As you can, a much better data output.
 
 ## Note regarding the elementSelector
 
-I would like to note that websites, such as [CoinMarketCap](https://coinmarketcap.com/) might be prone to change, thus, resulting in the web scraper not working (the array will show up empty in the final output).\
+I would like to point out that websites, such as [CoinMarketCap](https://coinmarketcap.com/) might be prone to change, thus, resulting in the web scraper not working (the array will show up empty in the final output).\
 To fix that, just copy again the new selector and replace it on the source code, and it should be working again.
 
 ## Installation
