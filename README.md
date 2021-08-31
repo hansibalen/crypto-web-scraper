@@ -39,7 +39,7 @@ All I needed to do was to add this line inside the express server:
     app.set("json spaces", 2);
 ```
 
-As you can, a much better data output.
+As you can see, a much better data output.
 
 ![Final output](https://i.ibb.co/whMJFJ7/img2.png)
 
