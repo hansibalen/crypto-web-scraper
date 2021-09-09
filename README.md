@@ -3,6 +3,12 @@
 A web scraper, which scrapes cryptocurrency data.\
 [Live site](https://crypto-web-scraper.herokuapp.com/)
 
+## Table of content
+
+- [Description](#description)
+- [Note](#note)
+- [Installation](#installation)
+
 ## Description
 
 I created a web scraper, which scrapes cryptocurrency data from the [CoinMarketCap](https://coinmarketcap.com/) website.\
@@ -43,7 +49,7 @@ As you can see, a much better data output.
 
 ![Final output](https://i.ibb.co/whMJFJ7/img2.png)
 
-## Note regarding the elementSelector
+## Note
 
 I would like to point out that websites, such as [CoinMarketCap](https://coinmarketcap.com/) might be prone to change, thus, resulting in the web scraper not working (the array will show up empty in the final output).\
 To fix that, just copy again the new selector and replace it on the source code, and it should be working again.
